@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SqliteDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHx-mr-Em3">
+                                <rect key="frame" x="20" y="79" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start DB Connection"/>
+                                <connections>
+                                    <action selector="createDBConnection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KcJ-cj-YoO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riP-cE-eMw">
+                                <rect key="frame" x="20" y="134" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create table"/>
+                                <connections>
+                                    <action selector="createTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VFw-8n-qRB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikX-2J-c68">
+                                <rect key="frame" x="20" y="189" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Insert data"/>
+                                <connections>
+                                    <action selector="insertData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="in5-3M-uAG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeO-6u-8mw">
+                                <rect key="frame" x="20" y="244" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Update data"/>
+                                <connections>
+                                    <action selector="updateData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ap3-cI-CAx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBZ-ce-bgm">
+                                <rect key="frame" x="20" y="299" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete data"/>
+                                <connections>
+                                    <action selector="deleteData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cjs-Mh-RYf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ikX-2J-c68" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5oW-aw-UiE"/>
+                            <constraint firstItem="QeO-6u-8mw" firstAttribute="top" secondItem="ikX-2J-c68" secondAttribute="bottom" constant="20" id="B5o-hD-M5x"/>
+                            <constraint firstItem="ikX-2J-c68" firstAttribute="top" secondItem="riP-cE-eMw" secondAttribute="bottom" constant="20" id="DlA-Bf-yvh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SHx-mr-Em3" secondAttribute="trailing" constant="20" id="E43-eX-Qdv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QeO-6u-8mw" secondAttribute="trailing" constant="20" id="JVu-Z2-kLb"/>
+                            <constraint firstItem="riP-cE-eMw" firstAttribute="top" secondItem="SHx-mr-Em3" secondAttribute="bottom" constant="20" id="TII-8j-QXM"/>
+                            <constraint firstItem="QeO-6u-8mw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UMt-by-FPR"/>
+                            <constraint firstItem="SHx-mr-Em3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XRp-37-X2h"/>
+                            <constraint firstItem="SHx-mr-Em3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bUR-kF-ztF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="riP-cE-eMw" secondAttribute="trailing" constant="20" id="dbR-XK-J2r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fBZ-ce-bgm" secondAttribute="trailing" constant="20" id="itd-pZ-O3b"/>
+                            <constraint firstItem="fBZ-ce-bgm" firstAttribute="top" secondItem="QeO-6u-8mw" secondAttribute="bottom" constant="20" id="lvZ-VY-sLm"/>
+                            <constraint firstItem="fBZ-ce-bgm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rPA-J0-Tu2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ikX-2J-c68" secondAttribute="trailing" constant="20" id="ufl-uD-AZu"/>
+                            <constraint firstItem="riP-cE-eMw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vgc-ps-9JZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
